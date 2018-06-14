@@ -24,3 +24,17 @@ babel で ES6 -> ES5 に変換されて public/js に保存される
 ### public
 
 ejs,scss を html,css にコンパイルしたものの出力先
+
+
+## gulp
+
+`gulp [command]`
+
+|command|description|
+|:---|:---|
+|ejs|`ejs/`以下の`*.ejs`をhtmlにコンパイル(`public/**/*.html`)|
+|sass|`scss/`以下の`*.scss`をcssにコンパイル(`public/css/**/*.css`)|
+|babel|`script/`以下の`*.js`をES5で動作するようトランスパイルする(`public/js/**/*.js`)|
+|browserSync-init|`browser-sync`のサーバーを初期化する|
+|reload|ブラウザリロード|
+|watch|`ejs/`,`scss/`,`script/`を監視して変更があれば自動でコンパイルしてリロード|
