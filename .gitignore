@@ -1,4 +1,5 @@
 ejs/*
 public/*
+node_modules
 
 !.gitkeep

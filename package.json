@@ -1,0 +1,23 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umasoya/mock-server.git"
+  },
+  "author": "umasoya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umasoya/mock-server/issues"
+  },
+  "homepage": "https://github.com/umasoya/mock-server#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^3.1.3"
+  }
+}
