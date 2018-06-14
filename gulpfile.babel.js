@@ -1,7 +1,9 @@
-const fs   = require('fs');
-const gulp = require('gulp');
-const ejs  = require('gulp-ejs');
-const sass = require('gulp-sass');
+'use strict';
+
+import fs   from 'fs';
+import gulp from 'gulp';
+import ejs  from 'gulp-ejs';
+import sass from 'gulp-sass';
 
 gulp.task('ejs', () => {
     const json = JSON.parse(fs.readFileSync('./json/config.json'));

@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/umasoya/mock-server#readme",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "gulp": "^3.9.1",
     "gulp-ejs": "^3.1.3",
     "gulp-sass": "^4.0.1"
