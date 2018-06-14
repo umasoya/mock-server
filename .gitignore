@@ -1,6 +1,8 @@
 ejs/*
 scss/*
 public/*
+public/css/*
 node_modules
 
+!public/css
 !.gitkeep
