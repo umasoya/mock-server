@@ -4,6 +4,7 @@ import fs          from 'fs';
 import gulp        from 'gulp';
 import ejs         from 'gulp-ejs';
 import sass        from 'gulp-sass';
+import babel       from 'gulp-babel';
 import browserSync from 'browser-sync';
 
 /*** consts ***/
@@ -12,7 +13,8 @@ const path = {
     jsonFile: 'json/config.json',
 
     ejs: {src: 'ejs/**/*.ejs', dest: 'public/'},
-    sass: {src: 'scss/**/*.scss', dest: 'public/css/'}
+    sass: {src: 'scss/**/*.scss', dest: 'public/css/'},
+    js: {src: 'script/**/*.js', dest: 'public/js/'}
 };
 
 const ejsOptions = {
@@ -38,9 +40,16 @@ gulp.task('sass', () => {
         .pipe(gulp.dest(path.sass.dest));
 });
 
+gulp.task('babel', () => {
+    gulp.src(path.js.src)
+        .pipe(babel())
+        .pipe(gulp.dest(path.js.dest));
+});
+
 gulp.task('watch', ['browserSync-init'], () => {
     gulp.watch(path.sass.src, ['sass', 'reload']);
     gulp.watch(path.ejs.src, ['ejs', 'reload']);
+    gulp.watch(path.js.src, ['babel', 'reload']);
 });
 
 gulp.task('browserSync-init', () => {
@@ -55,4 +64,4 @@ gulp.task('reload', () => {
     browserSync.reload();
 });
 
-gulp.task('default', ['ejs', 'sass']);
+gulp.task('default', ['ejs', 'sass', 'babel']);
